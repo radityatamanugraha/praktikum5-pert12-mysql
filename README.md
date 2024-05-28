@@ -217,6 +217,28 @@ JOIN dosen ON krsmahasiswa.kd_ds = dosen.kd_ds;
 ![gambar](dokumentasi4/sss9.png)
 
 
+# Hanya Output Table-Table nya saja
+
+## JOIN table Mahasiswa dan Dosen
+
+![gambar](dokumentasi4/sss10.png)
+
+## LEFT JOIN table Mahasiswa dan Dosen
+
+![gambar](dokumentasi4/sss11.png)
+
+## JOIN table JadwalMengajar, Dosen, dan Matakuluan
+
+![gambar](dokumentasi4/sss12.png)
+
+## JOIN table JadwalMengajar, Dosen, dan Matakuluan
+
+![gambar](dokumentasi4/sss8.png)
+
+## JOIN tabel KrsMahasiswa, Mahasiswa, Matakuliah, dan Dosen
+
+![gambar](dokumentasi4/sss13.png)
+
 
 
 
