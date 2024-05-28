@@ -165,6 +165,16 @@ JOIN dosen ON mahasiswa.kd_ds = dosen.kd_ds;
 
 ![gambar](dokumentasi4/sss7.png)
 
+```sql
+SELECT * FROM Matakuliah
+JOIN dosen ON matakuliah.kd_ds = dosen.kd_ds;
+```
+
+### Outputnya :
+
+![gambar](dokumentasi4/sss14.png)
+
+
 ## • Lakukan join tabel Matakuliah dan Dosen
 ## • Lakukan join table JadwalMengajar, Dosen, dan Matakuluan
 ## • Lakukan join tabel KrsMahasiswa, Mahasiswa, Matakuliah, dan Dosen
