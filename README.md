@@ -148,7 +148,7 @@ INSERT INTO KRSMahasiswa VALUES
 
 ![gambar](dokumentasi4/sss5.png)
 
-# Latihan
+# Latihan !!
 
 ## • Lakukan join table Mahasiswa dan Dosen
 ```sql
@@ -165,6 +165,7 @@ JOIN dosen ON mahasiswa.kd_ds = dosen.kd_ds;
 
 ![gambar](dokumentasi4/sss7.png)
 
+## • Lakukan join tabel Matakuliah dan Dosen
 ```sql
 SELECT * FROM Matakuliah
 JOIN dosen ON matakuliah.kd_ds = dosen.kd_ds;
@@ -174,11 +175,46 @@ JOIN dosen ON matakuliah.kd_ds = dosen.kd_ds;
 
 ![gambar](dokumentasi4/sss14.png)
 
+```
+Note: Terjadi error karena tidak ada relasi antara kedua tabel. tabel dosen memiliki kolom kd_ds sementara tabel matakuliah tidak. table matakuliah memiliki kolom kd_mk sementara tabel dosen tidak.  Tidak ada Foreign Key yang sama sehingga tidak bisa saling berelasi/JOIN. 
+```
 
-## • Lakukan join tabel Matakuliah dan Dosen
 ## • Lakukan join table JadwalMengajar, Dosen, dan Matakuluan
-## • Lakukan join tabel KrsMahasiswa, Mahasiswa, Matakuliah, dan Dosen
+```sql
+SELECT
+matakuliah.kd_mk,
+matakuliah.nama AS 'Mata Kuliah',
+matakuliah.sks,
+dosen.kd_ds,
+dosen.nama AS 'Dosen Pengampu' JadwalMengajar.hari, JadwalMengajar.jam, JadwalMengajar.ruang
+FROM matakuliah
+JOIN jadwalmengajar ON matakuliah.kd_mk = jadwalmengajar.kd_mk
+JOIN dosen ON jadwalmengajar.kd_ds = dosen.kd_ds;
+```
 
+### Outputnya :
+
+![gambar](dokumentasi4/sss8.png)
+
+
+## • Lakukan join tabel KrsMahasiswa, Mahasiswa, Matakuliah, dan Dosen
+```sql
+SELECT 
+krsmahasiswa.nim,
+mahasiswa.nama,
+dosen.nama AS 'Dosen PA',
+matakuliah.nama AS 'Mata Kuliah',
+mataKuliah.sks,
+dosen.nama AS 'Dosen Pengampu'
+FROM krsmahasiswa
+JOIN mahasiswa ON krsmahasiswa.nim = mahasiswa.nim
+JOIN matakuliah ON krsmahasiswa.kd_mk = matakuliah.kd_mk
+JOIN dosen ON krsmahasiswa.kd_ds = dosen.kd_ds;
+```
+
+### Outputnya :
+
+![gambar](dokumentasi4/sss9.png)
 
 
 
