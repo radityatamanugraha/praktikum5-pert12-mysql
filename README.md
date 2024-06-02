@@ -117,7 +117,7 @@ INSERT INTO JadwalMengajar VALUES
 
 ### Outputnya :
 
-![gambar](dokumentasi4/sss4.png)
+![gambar](dokumentasi4/sss6.png)
 
 ## •  Membuat Table Krs Mahasiswa
 ```sql
